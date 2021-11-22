@@ -33,3 +33,45 @@ contenido.
 
 print('Ejercicios de práctica con cadenas')
 # Empezar aquí la resolución del ejercicio
+
+palabra_1 = str(input('Ingrese la primera palabra:'))
+palabra_2 = str(input('Ingrese la segunda palabra:'))
+palabra_3 = str(input('Ingrese la tercera palabra:'))
+
+orden_palabra = int(input('Como quiere ordenar las palabras?: \n1. Ordenar por orden alfabético \n2. Ordenar por cantidad de letras\nIngresar 1 o 2:'))
+
+# Ordenado alfabéticamente
+if(orden_palabra == 1): 
+    if((palabra_1 >= palabra_2) and (palabra_1 >= palabra_3)):
+        if(palabra_2 > palabra_3):
+            print('El orden alfabético es {}, {} y {}'.format(palabra_1,palabra_2,palabra_3))
+        else:
+            print('El orden alfabético es {}, {} y {}'.format(palabra_1,palabra_3,palabra_2))
+    elif((palabra_2 >= palabra_1) and (palabra_2 >= palabra_3)):
+        if(palabra_1 > palabra_3):
+            print('El orden alfabético es {}, {} y {}'.format(palabra_2,palabra_1,palabra_3))
+        else:
+            print('El orden alfabético es {}, {} y {}'.format(palabra_2,palabra_3,palabra_1))
+    else:
+        if(palabra_1 > palabra_2):
+            print('El orden alfabético es {}, {} y {}'.format(palabra_3,palabra_1,palabra_2))
+        else:
+            print('El orden alfabético es {}, {} y {}'.format(palabra_3,palabra_2,palabra_1))
+
+# Ordenado por cantidad de letras
+elif(orden_palabra == 2): 
+    if((len(palabra_1) >= len(palabra_2)) and (len(palabra_1) >= len(palabra_3))):
+        if(len(palabra_2) > len(palabra_3)):
+            print('El orden por cantidad de letras es {}, {} y {}'.format(palabra_1,palabra_2,palabra_3))
+        else:
+            print('El orden por cantidad de letras es {}, {} y {}'.format(palabra_1,palabra_3,palabra_2))
+    elif((len(palabra_2) >= len(palabra_1)) and (len(palabra_2) >= len(palabra_3))):
+        if(len(palabra_1) > len(palabra_3)):
+            print('El orden alfabético es {}, {} y {}'.format(palabra_2,palabra_1,palabra_3))
+        else:
+            print('El orden alfabético es {}, {} y {}'.format(palabra_2,palabra_3,palabra_1))
+    else:
+        if(len(palabra_1) > len(palabra_2)):
+            print('El orden alfabético es {}, {} y {}'.format(palabra_3,palabra_1,palabra_2))
+        else:
+            print('El orden alfabético es {}, {} y {}'.format(palabra_3,palabra_2,palabra_1))
